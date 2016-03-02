@@ -6,11 +6,16 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core" >
     <head>
         <title>Ejemplo de aplicaci&oacute;n web hecha en Java</title>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta charset="UTF-8"/>
-        <meta name="author" content="Manuel Nachintoch Castillo" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <!--
+       
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <meta charset="utf-8"/>
+        <meta name="author" content="LADYJ" />
+        <meta name="generator" content="Bootply" />
+       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <link href="bootstrap.min.css" rel="stylesheet"/>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet"/>
+           <link href="styles.css" rel="stylesheet"/>
+           <!--
         Si su página requiere de usar javascript, puede incluirlo aquí en el
         encabezado de la siguiente forma:
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
@@ -24,8 +29,15 @@
         también:
         <link rel="icon" type="image/png" href="img/favicon.ico"></link>
         -->
-    </head>
+           </head>
+    
     <body>
+        <div class="container-full">
+            
+            <div class="row">
+       
+        <div class="col-lg-12 text-center v-center">
+        
         <!--
         Este comentario ejemplifica el uso de las etiqeutas "ui:"
         Suponga que su aplicación web presenta el mismo encabezado en todas
@@ -38,15 +50,19 @@
         
         Esto insertará el código del archivo solicitado tal cual.
         -->
-        <div><h1>Ingrese sus datos</h1>
+        <div class="input-group" style="width:340px;text-align:center;margin:0 auto;"><h1>Ingrese sus datos</h1>
             
-            <h:form >
+            
+            <h:form class="col-lg-12">
            
                 <h:inputText id="nombreCapturista" binding="#{nombre}" />
                  <h:inputText id="ventaBruta" binding="#{ventab}" />
                   <h:inputText id="fecha" binding="#{fecha}" />
-                <h:commandButton id="solicitar" value="Hacer petici&oacute;n"
-                                 action="#{login.calculaVentaNeta(ventab.value)}" />
+                  
+            
+                      <h:commandButton class="btn btn-lg btn-primary" id="solicitar" type="button" value ="Hacer petici&oacute;n"
+                                       action="#{login.calculaVentaNeta(ventab.value)}" /> 
+                  
                 <!--
                 Si necesitara validar un rango en un dato de entrada, puede usar
                 algo como lo siguiente con las etiqeutas "f:"
@@ -58,5 +74,14 @@
             <hr/>
             
         </div>
-    </body>
+        </div>
+                </div>
+            </div>
+        
+        
+   
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="bootstrap.min.js"></script>
+	 </body>
 </html>
+
